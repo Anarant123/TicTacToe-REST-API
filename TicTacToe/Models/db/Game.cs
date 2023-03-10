@@ -32,4 +32,21 @@ public partial class Game
     public string? _9 { get; set; }
 
     public string? Winner { get; set; }
+
+    public Game(string? name)
+    {
+        this.Name = name;
+        this.CountOfMoves = 0;
+        this.LustMove = " ";
+        this._1 = " ";
+        this._2 = " ";
+        this._3 = " ";
+        this._4 = " ";
+        this._5 = " ";
+        this._6 = " ";
+        this._7 = " ";
+        this._8 = " ";
+        this._9 = " ";
+        this.Winner = " ";
+    }
 }
