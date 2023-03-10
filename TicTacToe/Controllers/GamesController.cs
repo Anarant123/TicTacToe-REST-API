@@ -44,7 +44,9 @@ namespace TicTacToe.Controllers
                 return BadRequest();
             }
 
-            if (game.CountOfMoves == 5)
+            game.CountOfMoves++;
+
+            if (game.CountOfMoves >= 5)
                 StatusGame.status_check(game);
 
             _context.Entry(game).State = EntityState.Modified;
