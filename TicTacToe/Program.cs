@@ -1,3 +1,4 @@
+using TicTacToe.Models.db;
 
 namespace TicTacToe
 {
@@ -10,6 +11,9 @@ namespace TicTacToe
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            builder.Services.AddDbContext<TicTacContext>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
