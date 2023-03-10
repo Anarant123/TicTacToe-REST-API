@@ -42,7 +42,7 @@ namespace TicTacToe.Controllers
         {
             var game = await _context.Games.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (id != game.Id)
+            if (id != game.Id || game.LustMove == LustMove)
             {
                 return BadRequest();
             }
